@@ -32,7 +32,11 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  return new RegExp('{[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]'
+    + '-[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]'
+    + '-[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]'
+    + '-[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]'
+    + '-[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]}');
 }
 
 
@@ -54,13 +58,12 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return new RegExp('p[aio ]t');
 }
-
 
 /**
  * Returns the password validator regex.
- * Regex will validate a password to make sure it meets the follwing criteria:
+ * Regex will validate a password to make sure it meets the following criteria:
  *  - At least specified characters long (argument minLength)
  *  - Contains a lowercase letter
  *  - Contains an uppercase letter
